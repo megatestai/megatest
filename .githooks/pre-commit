@@ -4,6 +4,13 @@ set -euo pipefail
 repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
+# Report fallow findings in the changed files. This report does not fail the check.
+if command -v fallow >/dev/null; then
+  FALLOW_UPDATE_CHECK=off fallow review --brief || true
+else
+  echo "fallow is not installed: no fallow report."
+fi
+
 # ============================================================================
 # Biome Checks (format + lint staged TypeScript files)
 # ============================================================================

@@ -153,11 +153,11 @@ npm run check          # Biome lint + format check (warnings OK, errors fail)
 npm test               # All tests must pass
 ```
 
-Before each commit that changes JS or TS code, run `fallow audit` in the repository root. It must pass.
-
 For coverage reports: `npm run test:coverage` (must meet 80% threshold).
 
 A pre-commit hook auto-formats staged `.ts` files and runs the linter. Install with: `bash scripts/install_git_hooks.sh`
+
+The pre-commit hook also reports fallow findings for the changed files. Fix the findings that your change adds when the fix makes the code simpler.
 
 ## Code Style
 
