@@ -1,0 +1,4 @@
+{
+  "entry": ["projects/serve/static/src/**/*.{css,js}"],
+  "supportEntry": ["mocks/**/*.{css,js}", "scripts/generate-test-report.cjs"]
+}
