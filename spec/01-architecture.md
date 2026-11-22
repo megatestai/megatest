@@ -288,7 +288,7 @@ services:
       - redis-data:/data
 
   postgres:
-    image: postgres:18-alpine
+    image: postgres:19-alpine
     environment:
       - POSTGRES_USER=megatest
       - POSTGRES_PASSWORD=megatest
