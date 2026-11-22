@@ -288,13 +288,13 @@ services:
       - redis-data:/data
 
   postgres:
-    image: postgres:16-alpine
+    image: postgres:18-alpine
     environment:
       - POSTGRES_USER=megatest
       - POSTGRES_PASSWORD=megatest
       - POSTGRES_DB=megatest
     volumes:
-      - pg-data:/var/lib/postgresql/data
+      - pg-data:/var/lib/postgresql
 
 volumes:
   data:
